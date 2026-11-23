@@ -1,0 +1,34 @@
+@hostname = http://localhost:5183
+
+# 1. Get a token, then paste it below
+POST {{hostname}}/api/token/generate
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password": "password"
+}
+
+###
+
+@token = <paste token here>
+
+# 2. Sample route (New York -> Boston)
+GET {{hostname}}/v1.0/routes
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# 3. Custom route
+POST {{hostname}}/v1.0/routes
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "startLat": 40.7128,
+  "startLon": -74.0060,
+  "endLat": 42.3601,
+  "endLon": -71.0589
+}

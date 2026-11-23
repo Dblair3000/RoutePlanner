@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePlanner.Api", "src\RoutePlanner.Api\RoutePlanner.Api.csproj", "{5225A553-F8DF-4F19-BB74-69E7BC4802FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePlanner.Domain", "src\RoutePlanner.Domain\RoutePlanner.Domain.csproj", "{C6D5193C-CF46-4154-86C6-9F6606176CE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePlanner.Application", "src\RoutePlanner.Application\RoutePlanner.Application.csproj", "{DA9837E5-377A-497C-8A5D-1FE476989BE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FA3AB9F3-6E0D-4E7B-B050-F713A623ABDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePlanner.UnitTests", "tests\RoutePlanner.UnitTests\RoutePlanner.UnitTests.csproj", "{BD795D85-FC02-43EF-950F-260674D1CBEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePlanner.IntegrationTests", "tests\RoutePlanner.IntegrationTests\RoutePlanner.IntegrationTests.csproj", "{3B0E6244-2DBE-4BD4-A1D6-821C986A889B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5225A553-F8DF-4F19-BB74-69E7BC4802FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5225A553-F8DF-4F19-BB74-69E7BC4802FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5225A553-F8DF-4F19-BB74-69E7BC4802FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5225A553-F8DF-4F19-BB74-69E7BC4802FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D5193C-CF46-4154-86C6-9F6606176CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D5193C-CF46-4154-86C6-9F6606176CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D5193C-CF46-4154-86C6-9F6606176CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D5193C-CF46-4154-86C6-9F6606176CE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9837E5-377A-497C-8A5D-1FE476989BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9837E5-377A-497C-8A5D-1FE476989BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9837E5-377A-497C-8A5D-1FE476989BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9837E5-377A-497C-8A5D-1FE476989BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD795D85-FC02-43EF-950F-260674D1CBEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD795D85-FC02-43EF-950F-260674D1CBEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD795D85-FC02-43EF-950F-260674D1CBEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD795D85-FC02-43EF-950F-260674D1CBEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0E6244-2DBE-4BD4-A1D6-821C986A889B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0E6244-2DBE-4BD4-A1D6-821C986A889B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0E6244-2DBE-4BD4-A1D6-821C986A889B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0E6244-2DBE-4BD4-A1D6-821C986A889B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BD795D85-FC02-43EF-950F-260674D1CBEA} = {FA3AB9F3-6E0D-4E7B-B050-F713A623ABDF}
+		{3B0E6244-2DBE-4BD4-A1D6-821C986A889B} = {FA3AB9F3-6E0D-4E7B-B050-F713A623ABDF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41404848-DA30-4138-9DEE-E8B9FE7CB570}
+	EndGlobalSection
+EndGlobal
