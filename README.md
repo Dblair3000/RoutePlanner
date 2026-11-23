@@ -1,6 +1,6 @@
 # RoutePlanner API
 
-A .NET 8 Web API that returns a driving route between two points along with places to eat near the destination. It combines two external providers:
+A .NET 10 Web API that returns a driving route between two points along with places to eat near the destination. It combines two external providers:
 
 - **TomTom Routing API**: route distance, travel time and the route geometry
 - **Foursquare Places API**: dining and drinking spots within 500 m of the destination
@@ -38,7 +38,7 @@ Dependencies point inward: **Api → Application → Domain**. The domain projec
 
 ## Getting started
 
-**Prerequisites:** .NET 8 SDK, a [TomTom developer key](https://developer.tomtom.com/) and a [Foursquare Places API key](https://foursquare.com/developers/).
+**Prerequisites:** .NET 10 SDK, a [TomTom developer key](https://developer.tomtom.com/) and a [Foursquare Places API key](https://foursquare.com/developers/).
 
 ```bash
 cd src/RoutePlanner.Api
@@ -113,8 +113,6 @@ Swagger UI is at `http://localhost:5183/swagger`.
 dotnet test
 ```
 
-Every push and pull request to `main` builds the solution and runs all tests in GitHub Actions (`.github/workflows/ci.yml`).
-
 - **Unit tests** cover `RouteService` against a stubbed `HttpMessageHandler`, so no network calls are made. They check response mapping, missing fields, how each provider's API key is sent, provider errors and empty results. The validator rules are tested too.
 - **Integration tests** run the real ASP.NET Core pipeline in memory with `WebApplicationFactory`. They check token issuance, rejected credentials, the 401 for a missing token, the 400 for invalid input, and an authenticated round trip with the route service replaced by a fake.
 
@@ -125,8 +123,4 @@ Every push and pull request to `main` builds the solution and runs all tests in 
 - Response caching for repeated coordinate pairs to cut provider cost
 - Rate limiting per client, and health checks for both providers
 - Structured logging and tracing with OpenTelemetry
-- Code coverage reporting and container image publishing in the CI pipeline
-
-## License
-
-MIT
+- A CI pipeline (build, test, coverage) in GitHub Actions
